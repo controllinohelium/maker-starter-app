@@ -299,11 +299,10 @@ const HeliumActionSheet = ({
     </Box>
   )
 }
-
 const styles = StyleSheet.create({
-  cancelContainer: { backgroundColor: '#F0F0F5' },
-  cancelText: { color: '#B3B4D6' },
-  divider: { borderBottomColor: '#F0F0F5' },
+  cancelContainer: { backgroundColor: '#FFFFE2' },
+  cancelText: { color: '#FEFFA0' },
+  divider: { borderBottomColor: '#FFFFE2' },
 })
 
 export default memo(HeliumActionSheet)

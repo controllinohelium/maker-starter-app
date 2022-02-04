@@ -19,13 +19,12 @@ const LinkAccount = () => {
           universalLink: app.universalLink,
           requestAppId: getBundleId(),
           callbackUrl: 'makerappscheme://',
-          appName: 'Maker App',
+          appName: 'Controllino Hotspot',
         })
-
         Linking.openURL(url)
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.error(error)
+        console.error(error,'errr linking')
       }
     },
     [],

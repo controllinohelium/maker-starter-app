@@ -3,7 +3,7 @@ import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { useTranslation } from 'react-i18next'
 import { useNavigation } from '@react-navigation/native'
 import AddIcon from '@assets/images/add.svg'
-import { Linking } from 'react-native'
+import { Linking, Image, StyleSheet } from 'react-native'
 import { useAsync } from 'react-async-hook'
 import Box from '../../../components/Box'
 import Text from '../../../components/Text'
@@ -16,7 +16,7 @@ const HotspotsScreen = () => {
   const { t } = useTranslation()
   const navigation = useNavigation<RootNavigationProp>()
   const [accountAddress, setAccountAddress] = useState('')
-
+  const { controllinoImage } = styles()
   useAsync(async () => {
     const account = await getAddress()
     setAccountAddress(account || '')
@@ -44,16 +44,20 @@ const HotspotsScreen = () => {
           justifyContent="center"
           backgroundColor="primaryBackground"
         >
-          <Text variant="h2">{t('hotspots.empty.title')}</Text>
+          <Image
+            source={require('../../../assets/images/ControllinoLogo.png')}
+            style={controllinoImage}
+          />
+          <Text variant="h2">{t('hotspots.controllino.title')}</Text>
           <Text variant="body1" marginTop="ms">
-            {t('hotspots.empty.body')}
+            {t('hotspots.controllino.body')}
           </Text>
           <Button
             onPress={addHotspot}
             height={48}
             marginTop="l"
             mode="contained"
-            title={t('hotspots.empty.hotspots.add')}
+            title={t('hotspots.controllino.hotspots.add')}
             Icon={AddIcon}
           />
           <Button
@@ -61,11 +65,11 @@ const HotspotsScreen = () => {
             height={48}
             marginTop="l"
             mode="contained"
-            title={t('hotspots.empty.hotspots.assertLocation')}
+            title={t('hotspots.controllino.hotspots.assertLocation')}
           />
           <Text variant="body1" marginTop="l">
             {t('hotspots.view_activity')}
-            <Text variant="body1" color="primary" onPress={openExplorer}>
+            <Text variant="body1" color="primaryYellow" onPress={openExplorer}>
               {t('hotspots.explorer')}
             </Text>
             {t('generic.period')}
@@ -77,3 +81,13 @@ const HotspotsScreen = () => {
 }
 
 export default memo(HotspotsScreen)
+
+const styles = () => {
+  return StyleSheet.create({
+    controllinoImage: {
+      width: 50,
+      height: 50,
+      resizeMode: 'contain',
+    },
+  })
+}

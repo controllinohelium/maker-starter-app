@@ -71,13 +71,14 @@ const palette = {
   transparent: '#00000000',
   offWhite: '#F9FAFC',
   bobcatRed: '#EE2737',
+  primaryYellow: '#d5d800',
   bobcatDarkGrey: '#333333',
   bobcatGrey: '#aeaeae',
 }
 
 export const lightThemeColors = {
   ...palette,
-
+  primaryYellow : palette.primaryYellow,
   primary: palette.bobcatRed,
   primaryBackground: palette.white,
   primaryText: palette.black,

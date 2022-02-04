@@ -10,7 +10,7 @@ import {
 import { Camera } from 'expo-camera'
 import { useDebouncedCallback } from 'use-debounce/lib'
 import Toast from 'react-native-simple-toast'
-import { StyleSheet, Linking, ScrollView } from 'react-native'
+import { StyleSheet, Linking, ScrollView, Image } from 'react-native'
 import Clipboard from '@react-native-community/clipboard'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import BackScreen from '../../../components/BackScreen'
@@ -30,7 +30,8 @@ type Route = RouteProp<HotspotSetupStackParamList, 'HotspotSetupExternalScreen'>
 const HotspotSetupExternalScreen = () => {
   const { t } = useTranslation()
   const { params } = useRoute<Route>()
-  const colors = useColors()
+  // const colors = useColors()
+  const { controllinoImage } = styles()
   const { xl } = useBorderRadii()
   const [address, setAddress] = useState<string>()
   const { handleBarCode } = useAppLinkContext()
@@ -159,7 +160,11 @@ const HotspotSetupExternalScreen = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Icon color={colors.primary} width={24} height={24} />
+          <Image
+            style={controllinoImage}
+            source={require('@assets/images/ControllinoLogo.png')}
+          />
+          {/* <Icon color={colors.primary} width={24} height={24} /> */}
         </Box>
         <Text
           variant="h1"
@@ -240,3 +245,13 @@ const HotspotSetupExternalScreen = () => {
 }
 
 export default HotspotSetupExternalScreen
+
+const styles = () => {
+  return StyleSheet.create({
+    controllinoImage: {
+      width: 50,
+      height: 50,
+      resizeMode: 'contain',
+    },
+  })
+}

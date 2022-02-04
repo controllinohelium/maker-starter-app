@@ -290,12 +290,12 @@ const makeStyles = (colors: typeof theme.colors) => ({
   ownedFill: {
     fillOpacity: 0.4,
     fillColor: colors.secondary,
-    fillOutlineColor: '#1C1E3B',
+    fillOutlineColor: '#4D4E00',
   } as StyleProp<FillLayerStyle>,
   witnessFill: {
     fillOpacity: 0.4,
     fillColor: colors.yellow,
-    fillOutlineColor: '#1C1E3B',
+    fillOutlineColor: '#4D4E00',
   } as StyleProp<FillLayerStyle>,
 })
 

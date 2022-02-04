@@ -257,8 +257,8 @@ export default {
       title: 'REGISTERING HOTSPOT',
     },
     selection: {
-      subtitle: '[Placeholder instructions]',
-      title: 'Add\nyour Hotspot.',
+      subtitle: 'Choose your Hotspot from the list.',
+      title: 'Pick your Hotspot',
     },
     skip_location: {
       subtitle_1: 'You have decided to assert location later.',
@@ -292,13 +292,13 @@ export default {
   hotspots: {
     view_activity: 'After adding a Hotspot, you can view your account on the ',
     explorer: 'Helium Explorer',
-    empty: {
-      body: 'Your add hotspot\ninstructions',
+    controllino: {
+      body: 'In order to onboard your hotspot, you will need to generate a QR code. Please visit the dashboard of your hotspot to generate one. After you have a QR code, come back to the app and click on the button below.',
       hotspots: {
         add: 'Add Hotspot',
         assertLocation: 'Assert Location',
       },
-      title: 'Add a\n[Placeholder] Miner',
+      title: 'Add Controllino Hotspot to Helium',
     },
   },
   learn: {
