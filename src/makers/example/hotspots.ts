@@ -8,7 +8,7 @@ const ExampleHotspotQR = {
   onboardType: 'QR',
   translations: {
     en: {
-      externalOnboard: 'Please generate your QR code in the dashboard.',
+      externalOnboard: 'Please open your dashboard and scan the QR code that you just generated.',
     },
     ja: {},
     ko: {},

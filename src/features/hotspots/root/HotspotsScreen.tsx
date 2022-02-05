@@ -45,7 +45,7 @@ const HotspotsScreen = () => {
           backgroundColor="primaryBackground"
         >
           <Image
-            source={require('../../../assets/images/ControllinoLogo.png')}
+            source={require('../../../assets/images/ControllinoHotspot.png')}
             style={controllinoImage}
           />
           <Text variant="h2">{t('hotspots.controllino.title')}</Text>
@@ -85,8 +85,8 @@ export default memo(HotspotsScreen)
 const styles = () => {
   return StyleSheet.create({
     controllinoImage: {
-      width: 50,
-      height: 50,
+      width: 200 ,
+      height : 100 ,
       resizeMode: 'contain',
     },
   })
